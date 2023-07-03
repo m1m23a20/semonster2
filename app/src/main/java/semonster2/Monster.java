@@ -1,3 +1,4 @@
+package semonster2;
 import java.util.Random;
 
 public class Monster {
@@ -9,7 +10,10 @@ public class Monster {
 		this.name = this.summonMonster(random.nextInt(5));
 		this.rare = random.nextInt(5);
 	}
-
+	public Monster(int x,int y) {
+		this.name = this.summonMonster(x);
+		this.rare = y;
+	}
 	@Override
 	public String toString() {
 		return this.name + ":レア度[" + this.rare + "]";
