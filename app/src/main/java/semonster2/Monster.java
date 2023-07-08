@@ -20,7 +20,7 @@ public class Monster {
 		}
 	}
 	public Monster(int n,int r) {
-		this.name = this.summonMonster(r);
+		this.name = this.summonMonster(n);
 		this.rare = r;
 		if(r>=3){
 			this.name="スーパー"+this.name;
