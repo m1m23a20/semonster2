@@ -9,10 +9,22 @@ public class Monster {
 		Random random = new Random();
 		this.name = this.summonMonster(random.nextInt(5));
 		this.rare = random.nextInt(5);
+
 	}
-	public Monster(int x,int y) {
-		this.name = this.summonMonster(x);
-		this.rare = y;
+	public Monster(int r) {
+		Random random = new Random();
+		this.name = this.summonMonster(random.nextInt(5));
+		this.rare = r;
+		if(r>=3){
+			this.name="スーパー"+this.name;
+		}
+	}
+	public Monster(int n,int r) {
+		this.name = this.summonMonster(n);
+		this.rare = r;
+		if(r>=3){
+			this.name="スーパー"+this.name;
+		}
 	}
 	@Override
 	public String toString() {
