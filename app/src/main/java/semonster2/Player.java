@@ -30,6 +30,7 @@ public class Player {
 		for (Monster m : this.monsterDeck) {
 			sb.append(m);
 		}
+		sb.append("\n");
 		return sb.toString();
 	}
 }
