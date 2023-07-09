@@ -21,4 +21,14 @@ public class SeMonsterGame {
 		player.drawMonsters();
 		System.out.println(player);
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Players:\n");
+		for (var v : this.playerMap.values()) {
+			sb.append(v);
+		}
+		return sb.toString();
+	}
 }
