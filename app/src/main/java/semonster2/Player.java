@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class Player {
 	String name;
+	int hp;
 	ArrayList<Monster> monsterDeck = new ArrayList<>();
 	LinkedList<Integer> randomNumberList;
 	final int MONSTER_DECK_SIZE = 8;
@@ -12,6 +13,7 @@ public class Player {
 	Player(LinkedList<Integer> randomNumberList, String playerName) {
 		this.randomNumberList = randomNumberList;
 		this.name = playerName;
+		this.hp = 5;
 	}
 
 	public void drawMonsters() {
@@ -24,6 +26,7 @@ public class Player {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Deck:" + this.name + "\n");
+		sb.append("HP:" + this.hp + "\n");
 		for (Monster m : this.monsterDeck) {
 			sb.append(m);
 		}
