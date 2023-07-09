@@ -5,6 +5,8 @@ package semonster2;
 
 import static org.junit.Assert.*;
 
+import java.util.LinkedList;
+
 import org.junit.Test;
 
 public class AppTest {
@@ -12,5 +14,16 @@ public class AppTest {
     public void appHasAGreeting() {
         App classUnderTest = new App();
         assertEquals("こんにちは SEMonster", classUnderTest.getGreeting());
+    }
+
+    @Test
+    public void testCreateRandomList() {
+        LinkedList<Integer> list = App.createRandomList(10);
+        assertEquals(10, list.size());
+
+        for (int i=0; i<10; i++) {
+            assertTrue(list.get(i) >= 0);
+            assertTrue(list.get(i) <= 4);
+        }
     }
 }
