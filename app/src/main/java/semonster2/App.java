@@ -16,6 +16,9 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        SeMonsterGame mf = new SeMonsterGame(createRandomList(10));
+        mf.addPlayer("user");
+        mf.draw("user");
     }
 
     public static LinkedList<Integer> createRandomList(int count) {
