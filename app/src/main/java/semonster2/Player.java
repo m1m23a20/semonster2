@@ -7,6 +7,7 @@ public class Player {
 	String name;
 	ArrayList<Monster> monsterDeck = new ArrayList<>();
 	LinkedList<Integer> randomNumberList;
+	final int MONSTER_DECK_SIZE = 8;
 
 	Player(LinkedList<Integer> randomNumberList, String playerName) {
 		this.randomNumberList = randomNumberList;
@@ -14,7 +15,7 @@ public class Player {
 	}
 
 	public void drawMonsters() {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < MONSTER_DECK_SIZE; i++) {
 			this.monsterDeck.add(new Monster(this.randomNumberList.pop(), this.randomNumberList.pop()));
 		}
 	}
