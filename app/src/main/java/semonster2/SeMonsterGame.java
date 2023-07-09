@@ -1,10 +1,10 @@
 package semonster2;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 public class SeMonsterGame {
-	HashMap<String, Player> playerMap = new HashMap<>();
+	LinkedHashMap<String, Player> playerMap = new LinkedHashMap<>();
 	LinkedList<Integer> randomNumberList;
 
 	SeMonsterGame(LinkedList<Integer> randomNumberList) {
